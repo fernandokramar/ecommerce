@@ -1,0 +1,76 @@
+<div class="row">
+    <div class="col-xs-12">
+         <h4>General</h4>
+         <hr>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" class="form-control" name="name" placeholder="Enter your full name" value="<%= Customer.name %>" >
+</div> 
+
+<input type="hidden" name="_id" value="<%= Customer.id %> ">
+
+<div class="form-group">
+    <label for="email">Email</label>
+    <input type="email" class="form-control" name="email" placeholder="Enter a valid email " value="<%= Customer.email %>">
+</div>
+
+<div class="form-group">
+	<label for="password">Password</label>
+	<input type="password" name="password" class="form-control" placeholder="Enter your secrete password" value="<%= Customer.password %>">
+</div>
+
+<div class="row">
+    <div class="col-xs-12">
+         <h4>Personal</h4>
+         <hr>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="name">Birthday</label>
+    <input type="text" class="form-control" name="birthday" placeholder="xx/xx/xxxx" value="<%= Customer.birthday%>">
+</div>
+
+<div class="form-group">
+    <label for="name">ID (CPF)</label>
+    <input type="text" class="form-control" name="cpf" placeholder="xxx.xxx.xxx-xx" value="<%= Customer.id %>">
+</div>
+
+<div class="form-group">
+    <label for="name">Celphone</label>
+    <input type="tel" class="form-control" name="celphone" placeholder="(xx) xxxxx-xxxx" value="<%= Customer.celphone %>">
+</div>
+
+<div class="row">
+    <div class="col-xs-12">
+         <h4>Delivery</h4>
+         <hr>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="name">Street</label>
+    <input type="text" class="form-control" name="street" placeholder="Enter your street name" value="<%= Customer.address.street %>">
+</div>
+
+<div class="form-group">
+    <label for="name">Neighborhood</label>
+    <input type="text" class="form-control" name="neighborhood" placeholder="Enter your neighborhood" value="<%= Customer.address.neighborhood%>">
+</div>
+
+<div class="form-group">
+    <label for="name">number</label>
+    <input type="number" class="form-control" name="number_delivery" placeholder="Enter your number" value="<%= Customer.address.number%>">
+</div>
+
+<div class="form-group">
+    <label for="name">city</label>
+    <input type="text" class="form-control" name="city" placeholder="Enter your city name" value="<%= Customer.address.city%>">
+</div>
+
+<div class="form-group">
+    <button type="submit" class="btn btn-red-dark-default">Save</button>
+</div>
