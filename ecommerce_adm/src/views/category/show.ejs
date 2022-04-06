@@ -1,62 +1,29 @@
-<%- contentFor('body') %> 
+<section class="content-header">
+    <h1>
+        Category
+        <small>Edit</small>
+    </h1>
 
-<section id="products">
-    <div class="container">
-         <div class="row">
-             <div class="col-xs-12 col-md-12 col-lg-12 list_pro">
-                 <h4 class="title upper bold">Products</h4>
-                 <hr/>
-                 <div class="row">
-                    <div class="col-xs-12 col-md-4 product_item">
-                        <div class="preview">
-                            <img src="https://dummyimage.com/350x150/000/e8e9eb" class="img-responsive" alt="">
-                        </div>
-                        <div class="info">
-                            <a href="#">Item 1</a>
-                            <div class="price">
-                                <Strong>R$100,00</Strong>
-                                <a href="#" class="btn btn-red-default">See more</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-md-4 product_item">
-                        <div class="preview">
-                            <img src="https://dummyimage.com/350x150/000/e8e9eb" class="img-responsive" alt="">
-                        </div>
-                        <div class="info">
-                            <a href="#">Item 1</a>
-                            <div class="price">
-                                <Strong>R$100,00</Strong>
-                                <a href="#" class="btn btn-red-default">See more</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-md-4 product_item">
-                        <div class="preview">
-                            <img src="https://dummyimage.com/350x150/000/e8e9eb" class="img-responsive" alt="">
-                        </div>
-                        <div class="info">
-                            <a href="#">Item 1</a>
-                            <div class="price">
-                                <Strong>R$100,00</Strong>
-                                <a href="#" class="btn btn-red-default">See more</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-md-4 product_item">
-                        <div class="preview">
-                            <img src="https://dummyimage.com/350x150/000/e8e9eb" class="img-responsive" alt="">
-                        </div>
-                        <div class="info">
-                            <a href="#">Item 1</a>
-                            <div class="price">
-                                <Strong>R$100,00</Strong>
-                                <a href="#" class="btn btn-red-default">See more</a>
-                            </div>
-                        </div>
-                    </div>
-                 </div>
-             </div>
-         </div>
+    <ol class="breadcrumb">
+        <li><a href="/"><i class="fa fa-dashboard"></i></a></li>
+        <li class="active">Category Edit</li>
+    </ol>
+
+</section>
+
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box box-primary">
+                <div class="col-xs-12">
+                    <h4 class="box-title">Edit category</h4>
+                </div>
+               
+           
+                <form action="/category/'<%= category._id %>?_method=PUT" method="POST" role="form">
+                    <% include ./../partials/category/form %> 
+                </form>
+            </div>
+        </div>
     </div>
 </section>
