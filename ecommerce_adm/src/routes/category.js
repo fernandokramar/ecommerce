@@ -1,12 +1,14 @@
 const express = require('express')
 const router = express.Router()
 
-router.get('/', require('./../services/category/index'))
-router.get('/new', require('./../services/category/new'))
-router.get('/edit/:id', require('./../services/category/show'))
-router.post('/', require('./../services/category/create'))
+const isLoggedIn = require('./../services/auth/loggedin')
 
-router.put('/:id', require('./../services/category/update'))
-router.delete('/:id', require('./../services/category/destroy' )) 
+router.get('/', isLoggedIn, require('./../services/category/index'))
+router.get('/new', isLoggedIn, require('./../services/category/new'))
+router.get('/edit/:id', isLoggedIn, require('./../services/category/show'))
+router.post('/', isLoggedIn, require('./../services/category/create'))
+
+router.put('/:id', isLoggedIn, require('./../services/category/update'))
+router.delete('/:id', isLoggedIn, require('./../services/category/destroy' )) 
 
 module.exports = router

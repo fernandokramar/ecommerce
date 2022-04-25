@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 
-router.get('/:name', require('./../services/category/show'))
+router.get('/:slug', require('./../services/category/show'))
 
 
 module.exports = router

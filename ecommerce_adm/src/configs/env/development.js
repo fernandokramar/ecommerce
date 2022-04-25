@@ -5,7 +5,8 @@ const bodyParser = require('body-parser')
 const methodOverride = require('method-override')
 const expressEjsLayouts = require('express-ejs-layouts')
 const passport = require('passport')
-const Customer = require('./../../schemas/customer')
+const User = require('./../../schemas/user')
+
 const LocalStrategy = require('passport-local').Strategy 
 const mongoose = require('mongoose')
 const expressSession = require('express-session')
@@ -34,10 +35,9 @@ module.exports= (app) =>{
     app.use(passport.initialize())
     app.use(passport.session())
 
-    passport.use(new LocalStrategy(Customer.authenticate()))
-	passport.serializeUser(Customer.serializeUser())
-	passport.deserializeUser(Customer.deserializeUser())
+    passport.use(new LocalStrategy(User.authenticate()))
+	passport.serializeUser(User.serializeUser())
+	passport.deserializeUser(User.deserializeUser())
     
-    mongoose.Promise = Promise;
     mongoose.connect('mongodb://localhost:27017/ecommerce', {useMongoClient:true})
 }

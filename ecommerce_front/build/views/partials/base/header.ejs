@@ -52,12 +52,11 @@
                         <li>
                             <a href="/">home</a>
                         </li>
-                        <li>
-                            <a href="/category/cat1">cat 1</a>
-                        </li>
-                        <li>
-                            <a href="/category/cat2">cat 2</a>
-                        </li>
+                        <% for (var i = 0; i < categories_menu.length; i++) {%> 
+                            <li>
+                                <a href="/category/<%= categories_menu[i].slug %> "><%= categories_menu[i].name %> </a>
+                            </li>
+                        <% } %> 
                     </ul>
                 </div>
             </nav>
