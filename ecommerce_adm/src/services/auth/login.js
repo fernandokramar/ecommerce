@@ -15,9 +15,6 @@ module.exports = (req, res) => {
 			}
 
 			console.log('>>>>>> login com sucesso, redirecionando...');
-			
-			res.user = user
-			console.dir(user);
 
 			return res.redirect('/')
 		})

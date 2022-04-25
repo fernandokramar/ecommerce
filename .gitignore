@@ -1,3 +1,4 @@
 node_modules/
 .data/
 bower_components/
+ecommerce_adm/src/routes/middleware/s3.js

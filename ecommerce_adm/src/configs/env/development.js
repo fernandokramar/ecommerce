@@ -6,7 +6,6 @@ const methodOverride = require('method-override')
 const expressEjsLayouts = require('express-ejs-layouts')
 const passport = require('passport')
 const User = require('./../../schemas/user')
-
 const LocalStrategy = require('passport-local').Strategy 
 const mongoose = require('mongoose')
 const expressSession = require('express-session')
