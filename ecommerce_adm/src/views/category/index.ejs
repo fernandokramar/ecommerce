@@ -46,9 +46,14 @@
                                             <% } %>
                                         </td>
                                         <td>
-                                            <a href="/category/edit/<%= categories[i]._id %>" class="btn btn-default">
+                                            <a href="/category/edit/<%= categories[i]._id %>" class="btn btn-default btn-small">
                                                 <i class="fa fa-eye"></i>
                                             </a>
+                                            <form action="/category/<%= categories[i]._id %>?_method=DELETE" method="POST" class="inline">
+                                                <button type="submit" class="btn btn-danger btn-small">
+                                                    <i class="fa fa-trash"></i>
+                                                </button>
+                                            </form>
                                         </td>
                                     </tr>
                                 <% } %> 

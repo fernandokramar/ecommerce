@@ -1,7 +1,9 @@
 const express = require('express')
 const router = express.Router()
 
-router.get('/', require('./../services/main/'))
+const isLoggedIn = require('./../services/auth/loggedin')
+
+router.get('/', isLoggedIn, require('./../services/main/'))
 
 
 
